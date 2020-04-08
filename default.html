@@ -1,0 +1,61 @@
+<html>
+<head><title>moc.udiab.www</title></head>
+<body style="-webkit-transform: scaleX(-1)">
+	<iframe src="https://www.baidu.com/" scrolling="yes" frameborder="0" id="external-frame" height="100%" width="100%" onload='IFrameReSizeWidth("external-frame");IFrameReSize("external-frame")' ></iframe>
+	<script type="text/javascript">
+		// alert('hahahh')
+
+		
+
+		function IFrameReSizeWidth(iframename) {
+
+			var pTar = document.getElementById(iframename);
+
+				if (pTar) { //ff
+
+					if (pTar.contentDocument && pTar.contentDocument.body.offsetWidth) {
+
+					pTar.width = pTar.contentDocument.body.offsetWidth;
+
+				} //ie
+
+				else if (pTar.Document && pTar.Document.body.scrollWidth) {
+
+					pTar.width = pTar.Document.body.scrollWidth;
+
+				}
+
+			}
+
+		}
+
+		//iframe高度自适应
+
+function IFrameReSize(iframename) {
+
+var pTar = document.getElementById(iframename);
+
+if (pTar) { //ff
+
+if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
+
+pTar.height = pTar.contentDocument.body.offsetHeight;
+
+} //ie
+
+else if (pTar.Document && pTar.Document.body.scrollHeight) {
+
+pTar.height = pTar.Document.body.scrollHeight;
+
+}
+
+}
+
+}
+
+		
+
+	</script>
+</body>
+</html>
+
