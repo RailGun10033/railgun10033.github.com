@@ -1,61 +1,33 @@
-<html>
-<head><title>moc.udiab.www</title></head>
-<body style="-webkit-transform: scaleX(-1)">
-	<iframe src="https://www.baidu.com/" scrolling="yes" frameborder="0" id="external-frame" height="100%" width="100%" onload='IFrameReSizeWidth("external-frame");IFrameReSize("external-frame")' ></iframe>
-	<script type="text/javascript">
-		// alert('hahahh')
+ <!DOCTYPE html>
+ <html>
 
-		
+     <head>
+         <title>Realtime communication with WebRTC</title>
+         <style>
+             body {
+                 font-family: sans-serif;
+             }
+     
+             video {
+                 max-width: 100%;
+                 width: 320px;
+             }
+         </style>
+     </head>
 
-		function IFrameReSizeWidth(iframename) {
+     <body>
+         <h1>Realtime communication with WebRTC</h1>
+     
+         <video id="localVideo" autoplay playsinline></video>
+         <video id="remoteVideo" autoplay playsinline></video>
+     
+         <div>
+             <button id="startButton">开始</button>
+             <button id="callButton">调用</button>
+             <button id="hangupButton">挂断</button>
+         </div>
+         <script src="./main.js">
+         </script>
+ </body>
 
-			var pTar = document.getElementById(iframename);
-
-				if (pTar) { //ff
-
-					if (pTar.contentDocument && pTar.contentDocument.body.offsetWidth) {
-
-					pTar.width = pTar.contentDocument.body.offsetWidth;
-
-				} //ie
-
-				else if (pTar.Document && pTar.Document.body.scrollWidth) {
-
-					pTar.width = pTar.Document.body.scrollWidth;
-
-				}
-
-			}
-
-		}
-
-		//iframe高度自适应
-
-function IFrameReSize(iframename) {
-
-var pTar = document.getElementById(iframename);
-
-if (pTar) { //ff
-
-if (pTar.contentDocument && pTar.contentDocument.body.offsetHeight) {
-
-pTar.height = pTar.contentDocument.body.offsetHeight;
-
-} //ie
-
-else if (pTar.Document && pTar.Document.body.scrollHeight) {
-
-pTar.height = pTar.Document.body.scrollHeight;
-
-}
-
-}
-
-}
-
-		
-
-	</script>
-</body>
 </html>
-
